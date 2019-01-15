@@ -28,6 +28,10 @@ class childOneState extends State<childOne> {
 
   @override
   Widget build(BuildContext context) {
+
+    final _textStyle = TextAlign.center;
+
+
     // TODO: implement build
     return Container(
       margin: const EdgeInsets.all(10),
@@ -40,7 +44,23 @@ class childOneState extends State<childOne> {
               padding: new EdgeInsets.only(bottom: 15),
               child: new Text('子组件1'),
             ),
-            new Text('子组件2传过来的值' + '$data')
+            new Text('子组件2传过来的值' + '$data'),
+            new Container(
+
+              margin: new EdgeInsets.symmetric(horizontal: 100),
+              color: Colors.cyanAccent,
+              width: 100,
+              height: 20,
+              padding: new EdgeInsets.only(top: 0),
+
+              child: new Text('test',
+               textAlign: TextAlign.left,
+                style: new TextStyle(
+                  decorationStyle: TextDecorationStyle.solid,
+                  fontSize: 20
+                ),
+              ),
+            )
           ],
         ),
       ),
